@@ -113,8 +113,8 @@ def install_drivers():
 def verify_installation():
     """Verify that esptool.py is installed correctly"""
     print("\n🔍 Verifying installation...")
-    
-    if run_command("esptool.py version"):
+
+    if run_command("python -m esptool version"):
         print("✓ esptool.py installed successfully!")
         return True
     else:
@@ -161,10 +161,10 @@ def main():
     print("\nNext steps:")
     print("1. Connect your ESP board to your computer")
     print("2. Find the COM port (Windows) or device path (Linux/Mac)")
-    print("3. Use the provided scripts to flash your board:")
-    print("   • python esp8266_flash.py --port COM3 --action info")
-    print("   • python esp01_flash.py --port COM3 --action info")
-    print("   • python esp32_flash.py --port COM3 --action info")
+    print("3. Use esptool to interact with your board:")
+    print("   • python -m esptool --port COM3 chip_id")
+    print("   • python -m esptool --port COM3 flash_id")
+    print("   • python -m esptool --port COM3 erase_flash")
     print("\nFor detailed usage, see ESP_Flashing_Guide.md")
 
 if __name__ == "__main__":
