@@ -16,7 +16,7 @@ class ESP8266Flasher:
         self.port = port
         self.baud = baud
         self.flash_size = flash_size
-        self.flash_mode = "dio"
+        self.flash_mode = "dout"
         self.flash_freq = "40m"
         self.max_retries = 3
         
