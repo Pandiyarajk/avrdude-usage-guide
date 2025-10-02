@@ -16,7 +16,7 @@ class ESP01Flasher:
         self.port = port
         self.baud = baud
         self.flash_size = "1MB"  # ESP01 typically has 1MB flash
-        self.flash_mode = "dio"
+        self.flash_mode = "dout"
         self.flash_freq = "40m"
         self.max_retries = 3
     
